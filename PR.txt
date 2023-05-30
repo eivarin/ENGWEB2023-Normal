@@ -1,0 +1,31 @@
+1.1)
+foi renomeado o campo "Id" para "_id"
+
+foi corrido o comando:
+`mongoimport -d plantas -c plantas --file plantas.json --jsonArray`
+
+1.2)
+`use plantas`
+-1]
+db.plantas.countDocuments()
+-2]
+db.plantas.countDocuments({"Freguesia": "São Domingos de Rana"})
+-3]
+db.plantas.distinct("Freguesia").sort()
+-4]
+db.plantas.aggregate([{$group : {_id: "$Freguesia", count: {$sum:1}} }])
+-5]
+db.plantas.aggregate([{$group : {_id: "$Espécie", count: {$sum:1}} }])
+
+1.3)
+Para correr a api usar:
+$ cd ex1
+$ npm install
+$ npm start
+
+2)
+
+Para correr a api usar:
+$ cd ex2
+$ npm install
+$ npm start

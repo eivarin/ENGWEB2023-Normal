@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  .w3-card-4
+    header.w3-container.w3-teal
+      h1 Planta: #{p._id} #{d} #[a(href="/") Home]
+    .w3-container
+      ul.w3-ul.w3-card-4
+        li #[b _id:] #{p._id}
+        li #[b Número de Registo:] #{p["Número de Registo"]}
+        li #[b Código de rua:] #{p["Código de rua"]}
+        li #[b Rua:] #{p.Rua}
+        li #[b Local:] #{p.Local}
+        li #[b Freguesia:] #{p.Freguesia}
+        li #[b Espécie:] #[a(href="/especies/" + p._id)= p.Espécie]
+        li #[b Nome Científico:] #{p["Nome Científico"]}
+        li #[b Origem:] #{p.Origem}
+        li #[b Data de Plantação:] #{p["Data de Plantação"]}
+        li #[b Estado:] #{p.Estado}
+        li #[b Caldeira:] #{p.Caldeira}
+        li #[b Tutor:] #{p.Tutor}
+        li #[b Implantação:] #{p.Implantação}
+        li #[b Gestor:] #{p.Gestor}
+        li #[b Data de actualização:] #{p["Data de actualização"]}
+        li #[b Número de intervenções:] #{p["Número de intervenções"]}
